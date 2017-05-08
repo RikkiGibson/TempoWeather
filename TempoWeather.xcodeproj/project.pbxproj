@@ -13,6 +13,8 @@
 		5C6950B81EBEE0A80018F770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6950B71EBEE0A80018F770 /* Assets.xcassets */; };
 		5C6950BB1EBEE0A80018F770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6950B91EBEE0A80018F770 /* LaunchScreen.storyboard */; };
 		5C6950C61EBEE0A80018F770 /* TempoWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6950C51EBEE0A80018F770 /* TempoWeatherTests.swift */; };
+		5C6950D31EBEE3910018F770 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6950D11EBEE1ED0018F770 /* PromiseKit.framework */; };
+		5C6950D41EBEE3910018F770 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6950D11EBEE1ED0018F770 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5C6950D51EBEE3920018F770 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5C6950D41EBEE3910018F770 /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5C6950AD1EBEE0A80018F770 /* TempoWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempoWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6950B01EBEE0A80018F770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +52,7 @@
 		5C6950C11EBEE0A80018F770 /* TempoWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempoWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6950C51EBEE0A80018F770 /* TempoWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoWeatherTests.swift; sourceTree = "<group>"; };
 		5C6950C71EBEE0A80018F770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C6950D11EBEE1ED0018F770 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6950D31EBEE3910018F770 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +80,7 @@
 				5C6950AF1EBEE0A80018F770 /* TempoWeather */,
 				5C6950C41EBEE0A80018F770 /* TempoWeatherTests */,
 				5C6950AE1EBEE0A80018F770 /* Products */,
+				5C6950D01EBEE1ED0018F770 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +115,14 @@
 			path = TempoWeatherTests;
 			sourceTree = "<group>";
 		};
+		5C6950D01EBEE1ED0018F770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C6950D11EBEE1ED0018F770 /* PromiseKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +133,7 @@
 				5C6950A91EBEE0A80018F770 /* Sources */,
 				5C6950AA1EBEE0A80018F770 /* Frameworks */,
 				5C6950AB1EBEE0A80018F770 /* Resources */,
+				5C6950D51EBEE3920018F770 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6M3YNUD5R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TempoWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RikkiGibson.TempoWeather;
@@ -356,6 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6M3YNUD5R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TempoWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RikkiGibson.TempoWeather;
